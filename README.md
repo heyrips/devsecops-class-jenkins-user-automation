@@ -6,6 +6,9 @@
 - Please use t2.small do not use t2.micro or t2.nano
 - Spin up Ubuntu 22.04 (t2.small) instance in public subnet
 - Make sure you login to the instance
+- Before you run the job. you need to configure AWS Credentials
+  * Open Jenkinsfile (line 11)
+  * AWS = credentials("development") .. development is the id of AWS credentials
 
 ## Jenkins installation scripts
 ```
