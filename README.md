@@ -30,6 +30,20 @@ sudo apt-get update -y
 sudo apt-get install jenkins -y
 ```
 
+#if above commands give error try this -
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+#still face issue go to below link for weekly update.
+#https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
+
+
+
 ## To check the status of jenkins
 
 ```
